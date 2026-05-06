@@ -1,0 +1,23 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "hw_init.c"
+        "app_init.c"
+        "rotation_task.c"
+        "display_task.c"
+        "widgets/w_clima.c"
+        "widgets/w_bitcoin.c"
+        "widgets/w_hora.c"
+    INCLUDE_DIRS "." "widgets"
+    REQUIRES
+        nvs_flash
+        esp_wifi
+        esp_event
+        esp_netif
+        esp_http_client
+        json
+        lwip
+        esp_driver_i2c
+        esp_driver_spi
+        ssd1306
+)

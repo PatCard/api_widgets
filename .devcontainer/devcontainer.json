@@ -1,0 +1,24 @@
+{
+    "name": "ESP-IDF v5.3.1 - API Widgets",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "DOCKER_TAG": "v5.3.1"
+        }
+    },
+    "workspaceMount": "source=${localWorkspaceFolder},target=/project,type=bind",
+    "workspaceFolder": "/project",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "idf.gitPath": "/usr/bin/git"
+            },
+            "extensions": [
+                "espressif.esp-idf-extension",
+                "espressif.esp-idf-web"
+            ]
+        }
+    },
+    "runArgs": ["--privileged"]
+}
